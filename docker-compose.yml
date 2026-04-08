@@ -1,0 +1,22 @@
+services:
+  app:
+    build: .
+    image: nourhansalem23/lab6-app:latest
+    container_name: lab8-app
+    ports:
+      - "3000:3000"
+    environment:
+      MODE: docker
+      DB_URL: mongodb://mongo:27017
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:7
+    container_name: lab8-mongo
+    volumes:
+      - mongo_data:/data/db
+      - ./mongo-init/init.js:/docker-entrypoint-initdb.d/init.js:ro
+
+volumes:
+  mongo_data:
