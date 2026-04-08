@@ -24,7 +24,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: nourhansalem23/lab6-app:latest
+          tags: norasalem88/lab6-app
 
       - name: Deploy to EC2
         uses: appleboy/ssh-action@v1.0.3
