@@ -1,7 +1,7 @@
 services:
   app:
     build: .
-    image: nourhansalem23/lab6-app:latest
+    image: norasalem88/lab6-app
     container_name: lab8-app
     ports:
       - "3000:3000"
